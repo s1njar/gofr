@@ -1,7 +1,7 @@
 package handler
 
-import "github.com/gofiber/fiber/v2"
+import "gofr.dev/pkg/gofr"
 
-func (ctx *Context) Health(c *fiber.Ctx) error {
-	return c.SendString("Hello, World!")
+func Health(ctx *gofr.Context) (any, error) {
+	return "Hello World!", nil
 }

@@ -1,13 +1,9 @@
 package handler
 
 import (
-	"github.com/gofiber/fiber/v2"
+	"gofr.dev/pkg/gofr"
 )
 
-type Context struct{}
-
-func Init(app *fiber.App) {
-	ctx := &Context{}
-
-	app.Get("/", ctx.Health)
+func Init(app *gofr.App) {
+	app.GET("/", Health)
 }
